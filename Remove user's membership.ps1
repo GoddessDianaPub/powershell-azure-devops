@@ -1,9 +1,7 @@
 ﻿#You can remove the user's membership by using this PowerShell script.
-#It will show you all the organizations, but you will see the user's details in the org the has a user at.
-# $token (PAT) - the Personal Access Tokens need to be filled from this URL: "https://dev.azure.com/esi-grp/_usersSettings/tokens"
-# $displayName - the user's Display Name need to be filled from this URL: "https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users"
+#In the output It will show you all the organizations name, but you will see the user's details in the org the has a username at.
 
-# $token (PAT) - the Personal Access Tokens need to be filled from this URL: "https://dev.azure.com/esi-grp/_usersSettings/tokens"
+# $token (PAT) - the Personal Access Tokens need to be filled from this URL: "https://dev.azure.com/%YOUR_ORG%/_usersSettings/tokens"
 $token = "PAT” 
 $B64Pat = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes(":$token"))
 $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + $B64Pat }
