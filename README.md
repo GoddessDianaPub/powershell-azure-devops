@@ -4,16 +4,7 @@ Powershell scripts to manage access levels within all organizations in Azure Dev
 
 ## Requirements
 - Create a personal access tokens for all accessible organizations, with thses scopes:
-
-<div>
-  <div style="float: left; width: 70%;">
-    <!-- Your content goes here -->
-  </div>
-  <div style="float: right; width: 30%;">
-    <img src="https://user-images.githubusercontent.com/88986177/234857318-c82a6e44-4f30-4850-9d7c-f0e01fe740f9.png">
-  </div>
-</div>
-
+![image](https://user-images.githubusercontent.com/88986177/234857318-c82a6e44-4f30-4850-9d7c-f0e01fe740f9.png)
   - Entitlements: Read
   - Graph: Read & manage
   - Identity: Read & manage
