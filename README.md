@@ -3,7 +3,7 @@
 Powershell scripts to manage access levels within all organizations in Azure Devops.
 
 ## Requirements
-- Create a personal access tokens for all accessible organizations, with thses scopes:
+- Create a personal access token for all accessible organizations, with thses scopes:
 
 ![image](https://user-images.githubusercontent.com/88986177/234857318-c82a6e44-4f30-4850-9d7c-f0e01fe740f9.png)
 
