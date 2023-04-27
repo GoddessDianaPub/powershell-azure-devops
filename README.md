@@ -7,10 +7,9 @@ Powershell scripts to manage access levels within all organizations in Azure Dev
   - Entitlements: Read
   - Graph: Read & manage
   - Identity: Read & manage
-  - Member Entitlement Management: Read & write
+  - Member Entitlement Management: Read & write       ![image](https://user-images.githubusercontent.com/88986177/234857318-c82a6e44-4f30-4850-9d7c-f0e01fe740f9.png)
   - User Profile: Read & write
 
-![image](https://user-images.githubusercontent.com/88986177/234857318-c82a6e44-4f30-4850-9d7c-f0e01fe740f9.png)
 
 - Change thses variables in the scripts: 
   - $token = "PAT” 
