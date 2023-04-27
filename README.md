@@ -13,6 +13,6 @@ Powershell scripts to manage access levels within all organizations in Azure Dev
   - Member Entitlement Management: Read & write
   - User Profile: Read & write
 
-- Change thses variables in the scripts: 
-  - $token = "PAT” 
-  - $displayName = "Display Name"
+- Change thses variables in the scripts:
+  - $token = "Your PAT” 
+  - $displayName = "User's ADO Display Name"
