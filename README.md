@@ -16,3 +16,11 @@ Powershell scripts to manage access levels within all organizations in Azure Dev
 - Change thses variables in the scripts:
   - $token = "Your PAT” 
   - $displayName = "User's ADO Display Name"
+
+
+Access Level Name	Description	Type	$body (script)
+advanced	Basic + Test Plans	License	accountLicenseType
+express	Basic	License	accountLicenseType
+stakeholder	Stakeholder	License	accountLicenseType
+MSDN	Visual Studio Subscriber	Account	licensingSource
+![image](https://user-images.githubusercontent.com/88986177/234867143-92a56517-6105-46a6-b865-c03fed0512df.png)
