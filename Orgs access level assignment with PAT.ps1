@@ -3,8 +3,11 @@
 #You also need to add the "accountLicenseType" value according to the access level needed (follow Account License Type.xlsx).
 #"licensingSource" need to be configured "account", unless you need to change it to "Visual Studio Subscriber" access level (follow Account License Type.xlsx).
 
-#$token (PAT) - the Personal Access Tokens need to be filled from this URL: "https://dev.azure.com/%YOUR_ORG%/_usersSettings/tokens"
-$token = "PAT” 
+#The Personal Access Tokens need to be filled from this URL: "https://dev.azure.com/%YOUR_ORG%/_usersSettings/tokens"
+$token = "PAT”
+
+#The display name need to be filled from this URL: https://dev.azure.com/%YOUR_ORG%/_settings/users
+$displayName = "Display Name"
  
 $url="https://app.vssps.visualstudio.com/_apis/profile/profiles/me?api-version=6.0"
 
@@ -13,9 +16,6 @@ $token = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes
 $response = Invoke-RestMethod -Uri $url -Headers @{Authorization = "Basic $token"} -Method Get -ContentType application/json
 
 $publicAlias = $response.publicAlias
-
-# $displayName - the user's Display Name need to be filled from this URL: "https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users"
-$displayName = "Display Name"
 
  
 $url1=“https://app.vssps.visualstudio.com/_apis/accounts?memberId=$($publicAlias)&api-version=6.0”
@@ -34,8 +34,8 @@ Foreach($organization in $response1.value.accountName)
 
   $response2 = Invoke-RestMethod -Uri $url2 -Headers @{Authorization = "Basic $token"} -Method Get -ContentType application/json
 
-# You need to add the "accountLicenseType" value according to the access level needed (follow Account License Type.xlsx).
-# "licensingSource" need to be configured as "account", unless you need to change it to "Visual Studio Subscriber" access level (follow Account License Type.xlsx).
+#You need to add the "accountLicenseType" value according to the access level needed (follow Account License Type.xlsx).
+#"licensingSource" need to be configured as "account", unless you need to change it to "Visual Studio Subscriber" access level (follow Account License Type.xlsx).
 
   Foreach($users in $response2.members)
   {
