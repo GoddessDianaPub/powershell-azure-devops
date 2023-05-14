@@ -32,8 +32,7 @@ Foreach($organization in $response1.value.accountName)
 
   $response2 = Invoke-RestMethod -Uri $url2 -Headers @{Authorization = "Basic $token"} -Method Get -ContentType application/json
 
-# You need to add the "accountLicenseType" value according to the access level needed (follow Account License Type.xlsx).
-# "licensingSource" need to be configured as "account", unless you need to change it to "Visual Studio Subscriber" access level (follow Account License Type.xlsx).
+# Changes the access level to Basic + Test plans
 
   Foreach($users in $response2.members)
   {
